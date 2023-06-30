@@ -29,6 +29,14 @@
           font-size: 3.5rem;
         }
       }
+
+    .carousel-inner .item,
+    .carousel-inner .item.active,
+    .carousel-inner .item img {
+        margin: 100px;
+       
+    }
+
     </style>
 
     
@@ -73,10 +81,16 @@
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
+    <div class="carousel-inner" style = "background-color: gray">
+      <div class="carousel-item active" style = "
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),url('{{asset($images['imageUrl1'])}}');
+      ">
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>Example headline.</h1>
@@ -85,8 +99,16 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+      <div class="carousel-item"  style = "
+      background-image:linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ), url('{{asset($images['imageUrl2'])}}');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+      ">
 
         <div class="container">
           <div class="carousel-caption">
@@ -96,8 +118,13 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+      <div class="carousel-item"  style = "background-image:linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ), url('{{asset($images['imageUrl3'])}}');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;">
 
         <div class="container">
           <div class="carousel-caption text-end">
